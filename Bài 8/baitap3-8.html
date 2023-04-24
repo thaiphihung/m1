@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="star()" id="choi">Chơi</button>
+    <script>
+        function star() {
+            let number = prompt('Nhập số bạn đoán trong khoảng lớn nhất là bao nhiêu')
+        let randomnumber = Math.floor(Math.random() * number)
+        console.log(randomnumber);
+        let numbercheck = prompt('Nhập số bạn đoán')
+        let count = 0
+        while(numbercheck !== randomnumber){
+            count++;
+            if(count ==4){
+                alert('Bạn hết số lần đoán')
+                break;
+            }
+            else if(numbercheck < randomnumber){
+                alert('Số bạn đoán bé hơn')
+            }
+            else{
+                alert('Số bạn đoán lớn hơn')
+            }
+            numbercheck = prompt('Nhập số bạn đoán')
+        }
+        if (count == 4){
+            document.write('Bạn đã hết số lần đoán')
+        }
+        else {
+            document.write('Bạn đã đoán đúng')
+        }
+     }
+       
+    </script>
+</body>
+</html>

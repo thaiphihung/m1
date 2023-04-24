@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = []
+        x = prompt("Nhập dãy số ").split(",").map(Number)
+        for (var i = 0; i < x.length - 1; i++){
+            let max = i;
+            for(var j = i + 1; j < x.length; j++){
+                if (x[j] > x[max]){
+                    max = j;
+            }
+    }
+    if(max !== i){
+        let temp = x[i];
+        x[i] = x[max];
+        x[max] = temp;
+    }
+}console.log(x);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="sting">Nhập từ:</label>
+    <input type="text" name="" id="string">
+    <button onclick="trans()">Dịch</button>
+    <p id="result"></p>
+    <script>
+        function trans() {
+            let anh = ["one", "two", "three", "four", "five", "six"]
+            let viet = ["một", "hai", "ba", "bốn", "năm", "sáu"]
+            let string = document.getElementById("string").value;
+            let index_anh = -1; // set default value to -1
+            let result = "Không tìm thấy"; // set default value
+
+            for (let i = 0; i < anh.length; i++) {
+                if (string == anh[i]) {
+                    index_anh = i;
+                    result = ""; // reset result
+                    for (let j = 0; j < viet.length; j++) {
+                        if (index_anh == j) {
+                            result = viet[j];
+                            break;
+                        }
+                    }
+                }
+            }
+
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

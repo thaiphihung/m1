@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt('Điểm kiểm tra')
+        let b = prompt('Điểm giữa kỳ')
+        let c = prompt('Điểm cuối kỳ')
+
+        a = parseInt('Điểm kiểm tra')
+        b = parseInt('Điểm giữa kỳ')
+        c = parseInt('Điểm cuối kỳ')
+
+        let result =(a+b+c)/3
+        if (result >=8) {
+            alert('Học lực giỏi')
+        }
+        else if(result<8){
+            alert('Học lực khá')
+        }
+        else if(result<5){
+            alert('Học lực trung bình')
+        }
+        else {
+            alert('Dốt')
+        }
+    </script>
+</body>
+</html>

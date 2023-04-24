@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = parseInt(prompt("Nhập số"))
+        isPrime(x)
+        function isPrime(x){
+            let count = 0;
+            let isPrime = false;
+            if (x == 0){
+                alert(x + " không phải là số nguyên tố")
+            }
+            else{
+                for(var i = 1; i <= x; i++){
+                    if (x % i == 0){
+                        count += 1;
+                    }
+            }                                       
+            if(count == 2){
+                isPrime = true
+        }
+            if(isPrime) {
+                alert(x + " là số nguyên tố")
+            }
+            else {
+                alert(x + " không phải là số nguyên tố")
+            }        
+    }
+}
+// let number = parseInt(prompt("Nhập số cần check "));
+//         isPrime(number)
+
+//         function isPrime(number){
+//             let count = 0; // đếm số ước của số đang check
+//             let isPrime = false;
+
+//             if (number == 0) {
+//                 alert(number + " không là số nguyên tố")
+//             } else {
+//                 for ( let i = 1; i <= number; i++) {
+//                     if(number % i == 0) {
+//                         count += 1;
+//                     }
+//                 }
+                
+//                 if (count ==2 ) {
+//                     isPrime = true
+//                 }
+
+//                 if (isPrime) {
+//                     alert(number + " là số nguyên tố")
+//                 } else {
+//                     alert (number + " không là số nguyên tố")
+//                 }
+//             }
+//         }
+    </script>
+</body>
+</html>

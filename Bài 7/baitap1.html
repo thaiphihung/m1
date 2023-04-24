@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính chỉ số cân nặng</h1>
+       <label for="can_nang">Nhập chỉ số cân nặng (kg):</label>
+        <input type="text" value="" id="a"><br><br>
+        <label for="chieu_cao">Nhập chỉ số chiều cao (m)</label>
+        <input type="text" value="" id="b"><br><br>
+        <button onclick="kiem_tra()">Kiểm tra</button>
+        <p id="result"></p>
+    <script>
+       function kiem_tra() {
+        let weight = document.getElementById("a").value;    
+        let height = document.getElementById("b").value;
+        let ketqua = weight / (Math.pow(height, 2))
+        let result = ""
+        if (ketqua<18) {
+            result = 'Bạn gầy'
+        }
+        else if (ketqua<25){
+            result = 'Bạn bình thường'
+        }
+        else if (ketqua<30){
+            result = 'Bạn thừa cân'
+        }
+        else {
+            result = 'Béo Phì'
+        }
+        document.getElementById('result').innerHTML = "" + ketqua + "  " + "<b>"+ result + "</b>";
+       }
+       
+    </script>
+</body>
+</html>

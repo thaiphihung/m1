@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sao1 = ['Polaris', 'Aldebaran', 'Deneb','Vega','Altair','Dubhe','Regulus']
+        let sao2 = ['UrsaMinor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila','UrsaMajor','Leo']
+        let sao = prompt("Nhập tên sao :")
+        function check(sao){
+            let a = 0
+            let result = ""
+            for (let i = 0; i < sao1.length; i++){
+                if (sao == sao1[i]){
+                  sao = sao2[i] ;
+                  return sao
+                }
+            }
+                
+            //     for(let j = 0; j < sao2.length; j++){
+            //         if (a == sao2[j]){
+            //             result = sao2[j];
+            //             return result
+            //     }
+            //         else {
+
+            //         }
+            // }
+        } document.write(check(sao))
+    </script>
+</body>
+</html>
