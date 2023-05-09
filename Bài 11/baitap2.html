@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Temperature = function(c){
+            this.C = c;
+
+            this.getF = function(){
+                return 9/5 * this.C + 32
+            }
+            this.getK = function(){
+                return this.C + 273
+            }
+        }
+        let temperature = new Temperature(25)
+        let F = temperature.getF()
+        let K = temperature.getK()
+        document.write("Độ F :" + F + " Độ K :" + K)
+    </script>
+</body>
+</html>

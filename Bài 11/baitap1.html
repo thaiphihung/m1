@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="DemoCanvas" width="500" height="600"></canvas>
+    <script>
+        let Rectangle = function (width, height) {
+            this.width = width;
+            this.height = height;
+
+            this.getWidth = function () {
+                return this.width;
+            }
+            this.getHeight = function () {
+                return this.height;
+            }
+            this.setWidth = function (width) {
+                this.setWidth = width;
+            }
+            this.setHeight = function (height) {
+                this.setHeight = height;
+            }
+            this.getArea = function () {
+                return this.width * this.height
+            }
+            this.getPerimeter = function () {
+                return (this.width + this.height) * 2
+            }
+        }
+        let rectangle = new Rectangle(150, 50)
+        let area = rectangle.getArea()
+        let perimeter = rectangle.getPerimeter()
+
+        document.write("Có diện tích là " + area + " và có chu vi là :" + perimeter)
+
+        let canvas = document.getElementById("DemoCanvas");
+        let ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#fa4b2a';
+        ctx.fillRect(50, 50, rectangle.getWidth(), rectangle.getHeight());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas
+    id = "MyCanvas"
+    width = "200"
+    height= "100"
+    style = "border : 1px solid red rgb (255,0,255)"
+    ></canvas>
+    <script>
+        class Rectangle{
+            constructor(x,y,width,height,color = "#ff0000"){
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+                this.color = color;
+            }
+            area(){
+                return this.width * this.height
+            }
+            perimeter(){
+                return 2 * (this.width + this.height)
+            }
+            render(canvas){
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = this.color;
+                ctx.fillRect(this.x,this.y,this.width,this.height);
+            }
+        }
+        var canvas = document.getElementById('MyCanvas');
+        var hinhchunhat = new Rectangle(200,100,200,100,"#ff0000");
+        hinhchunhat.render(canvas);
+    </script>
+</body>
+</html>
